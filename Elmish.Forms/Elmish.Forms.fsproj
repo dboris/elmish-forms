@@ -1,6 +1,13 @@
 ﻿<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
+	<PackageTargetFallback>$(PackageTargetFallback);portable-win+net45+wp8+win81+wpa8</PackageTargetFallback>
+    <PackageVersion>0.1.2</PackageVersion>
+    <Authors>dboris</Authors>
+    <PackageProjectUrl>https://github.com/dboris/elmish-forms</PackageProjectUrl>
+    <PackageTags>Elmish Xamarin Forms F# Elm</PackageTags>
+    <Description>Elmish for Xamarin Forms based on Elmish.WPF</Description>
+    <PackageId>Elmish.Forms</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="FableStub.fs" />
@@ -14,5 +21,6 @@
     <PackageReference Include="FSharp.Core" Version="4.1.*" />
     <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
     <PackageReference Include="Xamarin.Forms" Version="2.4.0.269-pre2" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.0" />
   </ItemGroup>
 </Project>
