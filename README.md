@@ -6,17 +6,17 @@
 open Elmish
 open Elmish.Forms
 
-type Model = 
+type Model =
   { Count : int
     Step : int }
 
-type Msg = 
-    | Increment 
-    | Decrement 
+type Msg =
+    | Increment
+    | Decrement
     | Reset
     | SetStep of int
 
-type CounterApp () = 
+type CounterApp () =
     inherit Xamarin.Forms.Application ()
 
     let init () = { Count = 0; Step = 1 }
@@ -49,7 +49,7 @@ The page XAML:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Samples.CounterPage">
-	<ContentPage.Content>
+    <ContentPage.Content>
         <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
             <Label Text="{Binding Path=[CounterValue], StringFormat='{0}'}" HorizontalOptions="Center" />
             <Button Text="Increment" Command="{Binding Path=[IncrementCommand]}" />
@@ -58,7 +58,7 @@ The page XAML:
             <Slider Maximum="10" Minimum="1" Value="{Binding Path=[StepValue]}" />
             <Label Text="{Binding Path=[StepValue], StringFormat='Step size: {0}'}" HorizontalOptions="Center" />
         </StackLayout>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
